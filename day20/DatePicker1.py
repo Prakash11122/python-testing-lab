@@ -11,7 +11,7 @@ driver.maximize_window()
 
 driver.switch_to.frame(0)
 
-year = "2026"
+year = "2024"
 month = "November"
 date = "20"
 
@@ -25,7 +25,8 @@ while True:
     if mon == month and yr == year:
         break
     else:
-        driver.find_element(By.XPATH, "//a[@title='Next']").click()
+        # driver.find_element(By.XPATH, "//a[@title='Next']").click()
+        driver.find_element(By.XPATH,"//*[@id='ui-datepicker-div']/div/a[1]/span").click()
         time.sleep(3)
 
 # Select date
